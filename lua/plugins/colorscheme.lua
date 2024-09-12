@@ -5,6 +5,8 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  -- add xcode theme
+  { "arzg/vim-colors-xcode" },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
@@ -12,7 +14,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "melange", -- choose on of this: catppuccin gruvbox tokyonight melange
+      colorscheme = "catppuccin", -- choose on of this: catppuccin gruvbox tokyonight melange
     },
   },
   { "savq/melange-nvim" },

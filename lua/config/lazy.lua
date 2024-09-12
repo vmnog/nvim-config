@@ -11,10 +11,6 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -27,7 +23,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax", "gruvbox", "catppuccin" } },
+  install = { colorscheme = { "tokyonight", "habamax", "gruvbox", "catppuccin", "melange" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -43,26 +39,5 @@ require("lazy").setup({
         "zipPlugin",
       },
     },
-  },
-  -- Add your custom plugins here
-  spec = {
-    -- Add nvim-notify configuration
-    {
-      "rcarriga/nvim-notify",
-      config = function()
-        require("notify").setup({
-          -- Configuration options here
-        })
-        vim.notify = require("notify")
-      end,
-    },
-    -- Add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- Import any extras modules here
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
-    -- { import = "lazyvim.plugins.extras.lang.json" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
-    -- Import/override with your plugins
-    { import = "plugins" },
   },
 })
